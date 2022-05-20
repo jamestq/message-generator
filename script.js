@@ -17,8 +17,8 @@ const holidayGreetings = {
     startingLine : ['I wish you a', 'I pray that you have a', 'I hope that you have a']
 }
 
-function seasonSelection(seasonChoice){
-    switch(choice){
+function holidaySelection(seasonChoice){
+    switch(seasonChoice){
         case 'Summer' : return holidayDatabase.Summer;
         case 'Autumn' : return holidayDatabase.Autumn;
         case 'Winter' : return holidayDatabase.Winter;
@@ -37,7 +37,15 @@ function greetingConstructor(holidayChoice){
     return `${firstPart} ${secondPart} ${holidayChoice}`;
 }
 
+function greetingGenerator(){
+    const seasons = Object.keys(holidayDatabase);
+    let chosenSeason = seasons[Math.floor(Math.random()*seasons.length)];
+    let holidayChoices = holidaySelection(chosenSeason);
+    let holidayChoice = holidayChoices[Math.floor(Math.random()*holidayChoices.length)];
+    return greetingConstructor(holidayChoice);
+}
 
+console.log(greetingGenerator());
 
 
 
