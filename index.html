@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Greetings Generator</title>
+        <link href="./style.css" type="text/css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to Greetings Generator!</h1>
+            <h2>Your OneStop to the best seasonal greetings</h2>
+        </header>
+        <section class="generator-body">
+            <div id="generator">
+                <h2 id="prompt">First. Let me ask you some questions!</h2>
+                <div id="generator-card">
+                    <h3 id="question">What is the season you're looking for?</h3>
+                    <ul class="answers">
+                        <li id="answer1">Spring</li>
+                        <li id="answer2">Summer</li>
+                        <li id="answer3">Autumn</li>
+                        <li id="answer4">Winter</li>
+                    </ul>
+                </div>
+                <div class="controls">
+                    <button id="reset">Reset</button>
+                    <button id="next">Next</button>
+                </div>
+            </div>
+            <div id="generated-message">
+                <h2 id="main-greeting">Merry Christmas!</h2>
+                <p id="extra-message">Have a wonderful time with your friends and families!</p>
+            </div>
+        </section>
+        <script src="./script.js"></script>
+    </body>
+</html>
